@@ -1,19 +1,14 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace BelOutilBundle\Controller;
 
-/**
- * Description of OutilController
- *
- * @author fbaconnais2018
- */
-class OutilController {
-    //Test Test
-    //Test Test
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+class OutilController extends Controller
+{
+
+    public function indexAction()
+    {
+
+    }
 }

@@ -1,7 +1,10 @@
-bel_outil:
-    resource: "@BelOutilBundle/Controller/"
-    type:     annotation
+blog_front:
+    resource: "@BlogFrontBundle/Resources/config/routing.yml"
     prefix:   /
+
+eni_demo:
+    resource: "@EniDemoBundle/Resources/config/routing.yml"
+    prefix:   /demo
 
 app:
     resource: "@AppBundle/Controller/"

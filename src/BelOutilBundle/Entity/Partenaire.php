@@ -33,6 +33,13 @@ class Partenaire {
      */
     private $siteWeb;
     
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @ORM\OneToMany(targetEntity="Annonce", mappedBy="partenaire")
+     */
+    private $annonces;
+    
+    
     
     // GETTERS & SETTERS
     public function getId() {
@@ -71,6 +78,13 @@ class Partenaire {
         return $this;
     }
 
+    public function getAnnonces() {
+        return $this->annonces;
+    }
 
-    
+    public function setAnnonces($annonces) {
+        $this->annonces = $annonces;
+        return $this;
+    }
+
 }

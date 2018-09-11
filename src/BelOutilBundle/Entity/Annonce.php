@@ -57,6 +57,17 @@ class Annonce {
      */
     private $lienModif;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="Partenaire", mappedBy="annonces")
+     */
+    private $partenaire;
+     
+    /**
+     * @ORM\OneToOne(targetEntity="BelOutilBundle\Entity\Outil")
+     */
+    private $outil;
+    
     
     
     // GETTERS & SETTERS

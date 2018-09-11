@@ -32,6 +32,11 @@ class Outil {
      */
     private $lieu;
     
+    /**
+     * @ORM\OneToOne(targetEntity="BelOutilBundle\Entity\Annonce")
+     */
+    private $annonce;
+    
     
     
     // GETTERS & SETTERS

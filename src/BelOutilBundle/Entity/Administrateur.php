@@ -1,6 +1,6 @@
 <?php
 
-namespace Site\BelOutil\Entity;
+namespace BelOutilBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

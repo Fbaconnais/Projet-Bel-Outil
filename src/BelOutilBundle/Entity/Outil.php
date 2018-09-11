@@ -1,6 +1,6 @@
 <?php
 
-namespace Site\BelOutil\Entity;
+namespace BelOutilBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -75,5 +75,15 @@ class Outil {
         $this->lieu = $lieu;
         return $this;
     }
+
+    public function getAnnonce() {
+        return $this->annonce;
+    }
+
+    public function setAnnonce($annonce) {
+        $this->annonce = $annonce;
+        return $this;
+    }
+
 
 }

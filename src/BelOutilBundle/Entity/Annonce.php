@@ -1,6 +1,6 @@
 <?php
 
-namespace Site\BelOutil\Entity;
+namespace BelOutilBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -28,12 +28,12 @@ class Annonce {
     private $description;
     
     /**
-     * @ORM\Column(type="dateTime")
+     * @ORM\Column(type="datetime")
      */
     private $dateParution;
     
      /**
-     * @ORM\Column(type="dateTime")
+     * @ORM\Column(type="datetime")
      */
     private $dateExpiration;
     
@@ -59,12 +59,12 @@ class Annonce {
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @ORM\ManyToOne(targetEntity="Partenaire", mappedBy="annonces")
+     * @ORM\ManyToOne(targetEntity="Partenaire", inversedBy="annonces")
      */
     private $partenaire;
      
     /**
-     * @ORM\OneToOne(targetEntity="BelOutilBundle\Entity\Outil")
+     * @ORM\OneToOne(targetEntity="Outil")
      */
     private $outil;
     
@@ -152,5 +152,22 @@ class Annonce {
         return $this;
     }
 
+    public function getPartenaire() {
+        return $this->partenaire;
+    }
+
+    public function getOutil() {
+        return $this->outil;
+    }
+
+    public function setPartenaire($partenaire) {
+        $this->partenaire = $partenaire;
+        return $this;
+    }
+
+    public function setOutil($outil) {
+        $this->outil = $outil;
+        return $this;
+    }
 
 }

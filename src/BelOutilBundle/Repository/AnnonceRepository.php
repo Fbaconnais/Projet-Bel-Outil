@@ -9,7 +9,7 @@
 namespace BelOutilBundle\Controller;
 
 
-class OutilRepository extends \Doctrine\ORM\EntityRepository
+class AnnonceRepository extends \Doctrine\ORM\EntityRepository
 {
 
     public function getAnnonce(){

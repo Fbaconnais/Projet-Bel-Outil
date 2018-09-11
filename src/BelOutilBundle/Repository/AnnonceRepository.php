@@ -13,11 +13,17 @@ class AnnonceRepository extends \Doctrine\ORM\EntityRepository
 {
 
     public function getAnnonce(){
-            $request = 'SELECT resume
-                FROM BelOutilBundle:Annonce resume ORDER BY resume.dateParution
-                DESC';
-            $query = $this->getEntityManager()->createQuery($request);
-            $query->setMaxResults(20);
-            return $query->getResult();
-        }
+        $request = 'SELECT resume
+            FROM BelOutilBundle:Annonce resume ORDER BY resume.dateParution
+            DESC';
+        $query = $this->getEntityManager()->createQuery($request);
+        $query->setMaxResults(20);
+        return $query->getResult();
+    }
+    
+    public function getAccueil(){
+        $request = 'SELECT cat FROM BelOutilBundle:Annonce';
+        
+    }
+        
 }

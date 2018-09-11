@@ -9,6 +9,14 @@ class DefaultController extends Controller
 
     public function indexAction()
     {
-        return $this->render('BelOutilBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $repository = $em->getRepository('BelOutilBundle:Annonce');
+
+        $annonces = $repository->getNeufDern();
+        return $this->render('BelOutilBundle:Default:index.html.twig', array('annonces' => $annonces));
     }
+    
+    
+    
+    
 }

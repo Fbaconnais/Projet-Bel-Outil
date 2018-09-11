@@ -9,6 +9,7 @@
 namespace BelOutilBundle\Controller;
 
 use Doctrine\ORM\EntityRepository;
+
 class AnnonceRepository extends \Doctrine\ORM\EntityRepository {
 
 public function getNeufDern() {

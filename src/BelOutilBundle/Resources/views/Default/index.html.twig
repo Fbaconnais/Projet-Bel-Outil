@@ -1,6 +1,10 @@
 {% extends '::base.html.twig' %}
 {% block body %}
     {% block header %}
-        {{parent}}
+        {{parent()}}
         {%endblock%}
+       
+    {% block footer %}
+        {{parent()}}
+    {%endblock%}
     {% endblock%}

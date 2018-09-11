@@ -16,14 +16,7 @@ class OutilRepository extends \Doctrine\ORM\EntityRepository
         return $query->getResult();
     }
     
-    public function getAnnonce(){
-        $request = 'SELECT resume
-            FROM BelOutilBundle:Annonce resume ORDER BY resume.dateParution
-            DESC';
-        $query = $this->getEntityManager()->createQuery($request);
-        $query->setMaxResults(10);
-        return $query->getResult();
-    }
+    
             
 }
 

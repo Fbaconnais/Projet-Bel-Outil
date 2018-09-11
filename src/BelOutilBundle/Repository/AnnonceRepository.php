@@ -9,25 +9,12 @@
 namespace BelOutilBundle\Controller;
 
 use Doctrine\ORM\EntityRepository;
+class AnnonceRepository extends \Doctrine\ORM\EntityRepository {
 
-class OutilRepository extends EntityRepository {
-
-    public function getAnnonce() {
-        $request = 'SELECT resume
-                FROM BelOutilBundle:Annonce resume ORDER BY resume.dateParution
-                DESC';
-        $query = $this->getEntityManager()->createQuery($request);
-        $query->setMaxResults(10);
+public function getNeufDern() {
+        $dql = 'SELECT a FROM BelOutilBundle:Annonce a ORDER BY a.dateParution DESC';
+        $query = $this->getEntityManager()->createQuery($dql);
+        $query->setMaxResults(9);
         return $query->getResult();
     }
-
-    public function getInfo($keyword) {
-        $em = $this->getEntityManager();
-        $query = $em->createQuery('SELECT a FROM BelOutilBundle:Annonce a JOIN a.outil o '
-                . 'WHERE (a.description LIKE :key OR a.resume LIKE :key OR a.resume LIKE :key)');
-        $query->setParameter('key', '%' . $keyword . '%');
-        return $query->getResult();
- 
-    }
-
 }

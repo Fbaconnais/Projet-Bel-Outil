@@ -1,5 +1,5 @@
 body {
-	font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background: #fff;
     color: #222;
 }
@@ -16,7 +16,7 @@ header.masthead {
     position: relative;
     height: 100vh;
     background-color: #343a40;
-    background: url('https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center;
+    background: url('https://neilpatel-qvjnwj7eutn3.netdna-ssl.com/wp-content/uploads/2015/05/tools.jpg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -167,7 +167,7 @@ hr.my-border {
 }
 
 .mybg-events {
-    background: url('https://images.pexels.com/photos/167605/pexels-photo-167605.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center fixed;
+    background: url('https://previews.123rf.com/images/mrdoomits/mrdoomits1402/mrdoomits140200022/25799637-vintage-tools-hanging-on-a-wall-in-a-tool-shed-or-workshop.jpg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -280,7 +280,7 @@ section#group {
 }
 
 .mybg-music {
-    background: url('https://images.pexels.com/photos/167605/pexels-photo-167605.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center fixed;
+    background: url('https://previews.123rf.com/images/mrdoomits/mrdoomits1402/mrdoomits140200022/25799637-vintage-tools-hanging-on-a-wall-in-a-tool-shed-or-workshop.jpg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -355,7 +355,7 @@ li.list-inline-item a {
         transform: translate(-50%, -50%);
         top: 45px;
     }
-    
+
     .text-block {
         padding: 15px;
     }
@@ -375,9 +375,9 @@ li.list-inline-item a {
 }
 @media screen and (max-width: 767px) {
     .btn-login{
-       width:100%; 
+        width:100%; 
     }
     .btn-register {
-         width:100%; 
+        width:100%; 
     }
 }

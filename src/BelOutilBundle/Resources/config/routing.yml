@@ -2,3 +2,6 @@ index:
     path:     /
     defaults: { _controller: BelOutilBundle:Default:index }
 
+publication:
+    path:     /publication
+    defaults: { _controller: BelOutilBundle:Annonce:publication }

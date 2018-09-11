@@ -1,13 +1,389 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
+{% block head %} <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+{% endblock %}
+{% block stylesheets %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="{{asset('bundles/beloutil/css/LeBelOutilNavBar.css')}}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{%block body %}
+    {% block header %}
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <h3 class="my-heading ">Le<span class="bg-main">Bel</span>Outil</h3>
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars mfa-white"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <form class="form-inline my-2 my-lg-0 col-md-7">
+                        <input class="myform-control mr-sm-2" type="search" placeholder="Cherchez par outil, lieu ou mot-clé..." aria-label="Search">
+                        <button class="btn btn-light"><i class="fa fa-search"></i></button>
+                    </form>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-link">
+                            <a class="btn btn-primary btn-block btn-login" href="#">Connexion</a>
+                        </li>
+                        <li class="nav-link">
+                            <a class="btn btn-primary btn-block btn-register" href="#">Partenaire</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <header class="masthead text-white ">
+            <div class="overlay"></div>
+            <div class="container slider-top-text">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3 class="my-heading ">BIENVENUE AU BEL<span class="bg-main">OUTIL</span></h3>
+                        <p class="myp-slider text-center">Où hommes et femmes du monde entier trouvent marteaux à leurs clous</p>
+                        <p class="myp text-center">POSTEZ UNE ANNONCE   |   LOUEZ, VENDEZ OU PRÊTEZ   |   NOS OUTILS POUR VOS BESOINS</p>
+                        <a class="btn btn-primary btn-join" href="#">POSTEZ UNE ANNONCE</a>
+
+                    </div>
+                    <div class="col-md-12 text-center mt-5">
+                        <div class="scroll-down">
+                            <a class="btn btn-default btn-scroll floating-arrow" href="#about"><i class="fa fa-angle-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endblock %}
+        <section class="testimonials text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <h3 class="text-center font-weight-bold">POSTEZ UNE ANNONCE <span class="bg-main">SANS</span> INSCRIPTION</h3>
+                        <p class=" text-center"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                        <div class="card">
+                            <img class="card-img-top" src="https://images.pexels.com/photos/258732/pexels-photo-258732.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title text-center">CATHERINA GAIL</h4>
+
+                                <div class="card-text text-center">
+                                    <div class="social-icons">
+                                        <a href="#" class="btn btn-circle my-social-btn fb"><i class="fa fa-facebook"></i></a>
+                                        <a href="#" class="btn btn-circle my-social-btn twitter"><i class="fa fa-twitter"></i></a>
+                                        <a href="#" class="btn btn-circle my-social-btn google"><i class="fa fa-google"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <small>Lorem Ipsum is simply dummy text of the printing and typesetting</small>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                        <div class="card">
+                            <img class="card-img-top" src="https://images.prod.meredith.com/content/281474979780760/534766?auto=compress&cs=tinysrgb&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title text-center">TONDEUSE A GAZON</h4>
+
+                                <div class="card-text text-center">
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <small>Loue Betty, ma Tondeuse, à Nantes(44).</small>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                        <div class="card">
+                            <img class="card-img-top" src="https://images.pexels.com/photos/756242/pexels-photo-756242.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title text-center">JANET PRIS</h4>
+
+                                <div class="card-text text-center">
+                                    <div class="social-icons">
+                                        <a href="#" class="btn btn-circle my-social-btn fb"><i class="fa fa-facebook"></i></a>
+                                        <a href="#" class="btn btn-circle my-social-btn twitter"><i class="fa fa-twitter"></i></a>
+                                        <a href="#" class="btn btn-circle my-social-btn google"><i class="fa fa-google"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <small>Lorem Ipsum is simply dummy text of the printing and typesetting</small>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                        <div class="card">
+                            <img class="card-img-top" src="https://images.pexels.com/photos/167445/pexels-photo-167445.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title text-center">KEVIN WARD</h4>
+
+                                <div class="card-text text-center">
+                                    <div class="social-icons">
+                                        <a href="#" class="btn btn-circle my-social-btn fb"><i class="fa fa-facebook"></i></a>
+                                        <a href="#" class="btn btn-circle my-social-btn twitter"><i class="fa fa-twitter"></i></a>
+                                        <a href="#" class="btn btn-circle my-social-btn google"><i class="fa fa-google"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <small>Lorem Ipsum is simply dummy text of the printing and typesetting</small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="testimonials bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <h3 class="text-center font-weight-bold">NOS <span class="bg-main">DIX</span> DERNIERES ANNONCES</h3>
+                        <p class=" text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                        <div class="card">
+                            <img class="card-img-top h-262" src="https://images.pexels.com/photos/449627/pexels-photo-449627.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title">Lorem Ipsum Dolor Site Amet</h4>
+
+                                <div class="card-text">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small>$ 170</small>
+                                <a href="#" class="pull-right">Plus de détails</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                        <div class="card">
+                            <img class="card-img-top h-262" src="https://images.pexels.com/photos/56005/fiji-beach-sand-palm-trees-56005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title">Lorem Ipsum Dolor Site Amet</h4>
+
+                                <div class="card-text">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small>$ 170</small>
+                                <a href="#" class="pull-right">Plus de détails</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                        <div class="card">
+                            <img class="card-img-top h-262" src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title ">Lorem Ipsum Dolor Site Amet</h4>
+
+                                <div class="card-text ">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small>$ 170</small>
+                                <a href="#" class="pull-right">Plus de détails</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                        <div class="card">
+                            <img class="card-img-top h-262" src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title ">Lorem Ipsum Dolor Site Amet</h4>
+
+                                <div class="card-text ">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small>$ 170</small>
+                                <a href="#" class="pull-right">Plus de détails</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                        <div class="card">
+                            <img class="card-img-top h-262" src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title ">Lorem Ipsum Dolor Site Amet</h4>
+
+                                <div class="card-text ">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small>$ 170</small>
+                                <a href="#" class="pull-right">Plus de détails</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                        <div class="card">
+                            <img class="card-img-top h-262" src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title ">Lorem Ipsum Dolor Site Amet</h4>
+
+                                <div class="card-text ">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small>$ 170</small>
+                                <a href="#" class="pull-right">Plus de détails</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                        <div class="card">
+                            <img class="card-img-top h-262" src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title ">Lorem Ipsum Dolor Site Amet</h4>
+
+                                <div class="card-text ">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small>$ 170</small>
+                                <a href="#" class="pull-right">Plus de détails</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                        <div class="card">
+                            <img class="card-img-top h-262" src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title ">Lorem Ipsum Dolor Site Amet</h4>
+
+                                <div class="card-text ">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small>$ 170</small>
+                                <a href="#" class="pull-right">Plus de détails</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                        <div class="card">
+                            <img class="card-img-top h-262" src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+                            <div class="card-block">
+
+                                <h4 class="card-title ">Lorem Ipsum Dolor Site Amet</h4>
+
+                                <div class="card-text ">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small>$ 170</small>
+                                <a href="#" class="pull-right">Plus de détails</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                        <ul class="list-inline mb-2">
+                            <li class="list-inline-item">
+                                <a href="#">A propos</a>
+                            </li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item">
+                                <a href="#">Contact</a>
+                            </li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item">
+                                <a href="#">Mentions légales</a>
+                            </li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item">
+                                <a href="#">Politique de confidentialité</a>
+                            </li>
+                        </ul>
+                        <p class="text-muted small mb-4 mb-lg-0">© LeBelOutil 2018.</p>
+                    </div>
+                    <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item mr-3">
+                                <a href="#">
+                                    <i class="fa fa-facebook fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item mr-3">
+                                <a href="#">
+                                    <i class="fa fa-twitter fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-instagram fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            $(window).on("scroll", function () {
+                if ($(this).scrollTop() > 10) {
+                    $("nav.navbar").addClass("mybg-dark");
+                    $("nav.navbar").addClass("navbar-shrink");
+
+
+                } else {
+                    $("nav.navbar").removeClass("mybg-dark");
+                    $("nav.navbar").removeClass("navbar-shrink");
+
+                }
+            });
+        </script>
     </body>
-</html>
+{% endblock %}

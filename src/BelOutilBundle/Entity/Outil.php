@@ -5,7 +5,7 @@ namespace BelOutilBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="BelOutilBundle\Repository\OutilRepository")
  * @ORM\Table()
  */
 class Outil {

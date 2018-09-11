@@ -11,4 +11,10 @@ class OutilController extends Controller
     {
 
     }
+    
+    public function keywordAction()
+    {
+        
+    }
+    
 }
